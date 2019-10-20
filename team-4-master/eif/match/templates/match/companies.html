@@ -1,0 +1,8 @@
+{% extends "match/base.html" %}
+{% block content %}
+    <h1>Companies</h1>
+
+    {% for company in companies %}
+        <h2>{{ company.company_name }}</h2>
+    {% endfor %}
+{% endblock content %}

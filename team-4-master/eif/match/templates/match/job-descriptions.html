@@ -1,0 +1,55 @@
+{% extends "match/base.html" %}
+{% block content %}
+    <h1>Job Descriptions</h1>
+        <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #80A980!important"> Company
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu"> Filter by
+      <li><a href="#">Accenture</a></li>
+      <li><a href="#">City of Dallas</a></li>
+      <li><a href="#">NHB</a></li>
+    </ul>
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #80A980!important"> Interests
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu"> Filter by
+      <li><a href="#">Policy</a></li>
+      <li><a href="#">Coding</a></li>
+      <li><a href="#">People</a></li>
+    </ul>
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #80A980!important"> Location
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu"> Filter by
+      <li><a href="#">Dallas</a></li>
+      <li><a href="#">Houston</a></li>
+      <li><a href="#">New Orleans</a></li>
+    </ul>
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #80A980!important"> Public Transportation Access
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu"> Filter by
+      <li><a href="#">Yes</a></li>
+      <li><a href="#">No</a></li>
+    </ul>
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #80A980!important"> Endorsements
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu"> Filter by
+      <li><a href="#">STEM</a></li>
+      <li><a href="#">Arts and Humanities</a></li>
+    </ul>
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #80A980!important"> Availability
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu"> Filter by
+      <li><a href="#">Full Time</a></li>
+      <li><a href="#">Part Time</a></li>
+    </ul>
+  </div>
+  {% for job in jobs %}
+        <div class="card" style="width: 18rem; margin-top: 20px;">
+       <div class="card-body">
+         <h5 class="card-title"> {{ job.name }}</h5>
+         <h6 class="card-subtitle mb-2 text-muted"> {{ job.location }}</h6>
+         <h6 class="card-subtitle mb-2 text-muted"> Pay: {{ job.compensation }}</h6>
+         <p class="card-text"> {{ job.description }}</p>
+       </div>
+      </div>
+  {% endfor %}
+{% endblock content %}

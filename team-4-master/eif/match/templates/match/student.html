@@ -1,0 +1,14 @@
+{% extends "match/base.html" %}
+{% block content %}
+    <h1>{{ student.first_name }} {{ student.last_name }}</h1>
+    <!-- Add in their rankings -->
+    {% if job_rank_names %}
+        <h2>Your Rankings</h2>
+        <ol>
+            {% for job in job_rank_names %}
+                <li>{{ job }}</li>
+            {% endfor %}
+        </ol>
+    {% endif %}
+    <a href="{% url 'add-student-rank-individual' student.id %}" class="btn btn-success" role="button">Add Rank!</a>
+{% endblock content %}

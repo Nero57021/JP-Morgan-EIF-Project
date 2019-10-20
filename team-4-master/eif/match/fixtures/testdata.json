@@ -1,0 +1,51 @@
+[
+    {
+        "model": "match.student",
+        "pk": 1,
+        "fields": {
+            "resume": "http://www.africau.edu/images/default/sample.pdf",
+            "GPA": 3.99,
+            "first_name": "Arami",
+            "last_name": "Llera"
+        }
+    },
+    {
+        "model": "match.company",
+        "pk": 2,
+        "fields": {
+            "about_info": "The most amazing company",
+            "company_location": "Plano, TX",
+            "company_name": "JPMorgan Chase"
+        }
+    },
+    {
+        "model": "match.job",
+        "pk": 3,
+        "fields": {
+            "description": "Amazing Job #1 is amazing because lalalala",
+            "location": "Plano, TX",
+            "compensation": 5000,
+            "name": "Amazing Job #1",
+            "number_of_positions": 1,
+            "company": 2
+        }
+    },
+    {
+        "model": "match.StudentJob",
+        "pk": 4,
+        "fields": {
+            "job": 3,
+            "rank": 1,
+            "student": 1
+        }
+    },
+    {
+        "model": "match.CompanyStudent",
+        "pk": 5,
+        "fields": {
+            "job": 3,
+            "rank": 1,
+            "student": 1
+        }
+    }
+]
